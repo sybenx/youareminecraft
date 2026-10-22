@@ -27,7 +27,8 @@
         }
     return out.sort((a, b) => a[0] - b[0]).map(e => e[1]);
   }
-  const load = f => fetch('data/' + f).then(r => r.json());
+  const DATA_VERSION = 3;  // bump when map/data changes, so browsers skip their cached copy
+  const load = f => fetch('data/' + f + '?v=' + DATA_VERSION).then(r => r.json());
   function loadSigns() {
     return signsLoading || (signsLoading = load('signs.json').then(d => { signs = d; index(d, grid.signs); refresh(); }));
   }
