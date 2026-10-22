@@ -1,0 +1,9 @@
+uploader/key.txt
+*.done
+bluemap/packs/
+work/
+*.jar
+*.png
+!map/assets/*.png
+__pycache__/
+.DS_Store

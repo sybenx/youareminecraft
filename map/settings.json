@@ -1,0 +1,22 @@
+{
+  "version": "5.28",
+  "useCookies": false,
+  "defaultToFlatView": false,
+  "resolutionDefault": 1.0,
+  "minZoomDistance": 5,
+  "maxZoomDistance": 100000,
+  "hiresSliderMax": 500,
+  "hiresSliderDefault": 100,
+  "hiresSliderMin": 0,
+  "lowresSliderMax": 7000,
+  "lowresSliderDefault": 2000,
+  "lowresSliderMin": 500,
+  "mapDataRoot": "https://yam.syb.lol",
+  "liveDataRoot": "https://yam.syb.lol",
+  "clientDecompression": true,
+  "maps": [
+    "yam"
+  ],
+  "scripts": [],
+  "styles": []
+}

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You Are Minecraft (2012)</title>
+<meta name="description" content="An archive of You Are Minecraft, the 2012 server where 87,615 players built giant statues of their own skins. Explore the whole world in 3D.">
+<link rel="icon" href="map/assets/favicon-DEN7TZ5X.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #eef3e8;
+    --fg: #1d2418;
+    --muted: #556049;
+    --card: #ffffff;
+    --line: #cfd8c4;
+    --grass: #5d9c3a;
+    --grass-dark: #3f6f25;
+    --dirt: #8a5a3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141812;
+      --fg: #e7ecdf;
+      --muted: #a3ad97;
+      --card: #1d2219;
+      --line: #313a2b;
+      --grass: #7bbf4f;
+      --grass-dark: #5d9c3a;
+      --dirt: #b07a55;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141812;
+    --fg: #e7ecdf;
+    --muted: #a3ad97;
+    --card: #1d2219;
+    --line: #313a2b;
+    --grass: #7bbf4f;
+    --grass-dark: #5d9c3a;
+    --dirt: #b07a55;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.6 Inter, system-ui, sans-serif;
+  }
+  .strip {
+    height: 18px;
+    background:
+      linear-gradient(var(--grass) 0 6px, var(--dirt) 6px 100%);
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 16px 64px;
+  }
+  .eyebrow {
+    font-family: Silkscreen, monospace;
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: .04em;
+    margin: 0 0 8px;
+  }
+  h1 {
+    font-family: Silkscreen, monospace;
+    font-weight: 400;
+    font-size: clamp(34px, 8vw, 56px);
+    line-height: 1.05;
+    margin: 0 0 24px;
+  }
+  p { margin: 0 0 16px; }
+  .lede { font-size: 20px; }
+  .cta {
+    display: inline-block;
+    margin: 16px 0 40px;
+    padding: 14px 26px;
+    font-family: Silkscreen, monospace;
+    font-size: 18px;
+    color: #fff;
+    background: var(--grass-dark);
+    border: 3px solid var(--fg);
+    box-shadow: 4px 4px 0 var(--fg);
+    text-decoration: none;
+  }
+  .cta:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--fg); }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 0 0 40px;
+  }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 14px;
+  }
+  .stat b {
+    display: block;
+    font-family: Silkscreen, monospace;
+    font-weight: 400;
+    font-size: 22px;
+  }
+  .stat span { color: var(--muted); font-size: 14px; }
+  h2 {
+    font-family: Silkscreen, monospace;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 32px 0 12px;
+  }
+  ul { padding-left: 20px; margin: 0 0 16px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--grass-dark); }
+  footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 20px; margin-top: 48px; }
+  @media (max-width: 520px) {
+    .stats { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="strip"></div>
+<main>
+  <p class="eyebrow">A Minecraft server, 2012</p>
+  <h1>You Are Minecraft</h1>
+  <p class="lede">A flat creative world where every player got a plot along the street and built a giant statue of their own skin. By the end, 87,615 of them stood side by side.</p>
+  <a class="cta" href="map/">Explore the 3D map</a>
+
+  <div class="stats">
+    <div class="stat"><b>87,615</b><span>player statues</span></div>
+    <div class="stat"><b>412,885</b><span>chunks rendered</span></div>
+    <div class="stat"><b>1.2.5</b><span>CraftBukkit, 2012</span></div>
+  </div>
+
+  <h2>What it was</h2>
+  <p>You Are Minecraft ran on CraftBukkit 1.2.5 in 2012. Everyone who joined got a plot along the street and built a giant statue of their own skin, block by block. Plot after plot, the streets filled up with blocky giants, one for each player who ever logged in.</p>
+
+  <h2>Walking around</h2>
+  <ul>
+    <li>Drag to look around, scroll or pinch to zoom.</li>
+    <li>Use the menu to switch between perspective, flat and free-flight views.</li>
+    <li>The world is huge. Tiles load as you move, so give it a moment on a slow connection.</li>
+  </ul>
+
+  <h2>How this map was made</h2>
+  <p>The original world was converted to a modern format with Chunker and rendered with BlueMap, using a resource pack that puts the 1.2.5 textures back on every block so it looks the way it did in 2012. The scripts and steps are in the <a href="https://github.com/sybenx/youareminecraft">GitHub repo</a>.</p>
+
+  <footer>Fan archive. Not affiliated with Mojang or Microsoft. Minecraft is a trademark of Mojang Synergies AB.</footer>
+</main>
+</body>
+</html>
