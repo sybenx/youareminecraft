@@ -65,4 +65,5 @@ def main():
     print('tile entities', dict(ents))
 
 
-main()
+if __name__ == "__main__":
+    main()

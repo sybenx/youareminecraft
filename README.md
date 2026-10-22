@@ -15,6 +15,9 @@ No Mojang textures or jars are committed here. The build pulls them from the off
 | `index.html` | Landing page |
 | `map/` | BlueMap 5.28 web app. `map/settings.json` points `mapDataRoot` and `liveDataRoot` at `https://yam.syb.lol` with `clientDecompression: true` |
 | `tools/build_pack.py` | Builds a resource pack that puts the 1.2.5 `terrain.png` tiles onto the modern block texture names, so the render looks the way the server did in 2012 |
+| `map/yam-signs.js`, `map/yam-signs.css` | Name labels on every statue stand, readable signs up close, and the name/sign search (`map/?find=<name>` links straight to a statue) |
+| `map/data/` | Sign index the script loads, built by the two tools below |
+| `tools/extract_signs.py`, `tools/build_sign_index.py` | Pull every sign (position, facing, text) out of the original 1.2.5 world and split it into plot names and other signs |
 | `tools/scan_ids.py` | Counts `(blockId, data)` pairs in the original world, used to check which textures the pack needs |
 | `bluemap/` | BlueMap CLI config (core, webapp, map, file storage) |
 | `uploader/` | Temporary Cloudflare Worker plus a batch client for pushing ~105k tiles into R2 without hitting the REST API rate limit |
@@ -65,4 +68,11 @@ Everything generated goes in `work/`, which is git-ignored.
 
    The upload resumes from `PUSH_DONE` if it stops. Delete the Worker afterwards.
 
-6. **Serve.** Attach a custom domain to the bucket, allow the site's origin in the bucket's CORS policy, and point `map/settings.json` at it.
+6. **Signs.** BlueMap doesn't draw sign text, so the names come straight from the original world:
+
+   ```
+   python3 tools/extract_signs.py path/to/world/region work/signs.json
+   python3 tools/build_sign_index.py work/signs.json map/data
+   ```
+
+7. **Serve.** Attach a custom domain to the bucket, allow the site's origin in the bucket's CORS policy, and point `map/settings.json` at it.

@@ -17,6 +17,10 @@
   "maps": [
     "yam"
   ],
-  "scripts": [],
-  "styles": []
+  "scripts": [
+    "yam-signs.js"
+  ],
+  "styles": [
+    "yam-signs.css"
+  ]
 }

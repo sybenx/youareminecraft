@@ -88,6 +88,28 @@
     text-decoration: none;
   }
   .cta:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--fg); }
+  .find { margin: -16px 0 40px; }
+  .find label { display: block; color: var(--muted); font-size: 15px; margin-bottom: 6px; }
+  .find div { display: flex; gap: 8px; max-width: 420px; }
+  .find input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--fg);
+    background: var(--card);
+    border: 2px solid var(--line);
+  }
+  .find input:focus { outline: none; border-color: var(--grass); }
+  .find button {
+    padding: 0 18px;
+    font-family: Silkscreen, monospace;
+    font-size: 15px;
+    color: var(--fg);
+    background: var(--card);
+    border: 2px solid var(--fg);
+    cursor: pointer;
+  }
   .stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -129,6 +151,14 @@
   <p class="lede">A flat creative world where every player got a plot along the street and built a giant statue of their own skin. By the end, 87,615 of them stood side by side.</p>
   <a class="cta" href="map/">Explore the 3D map</a>
 
+  <form class="find" action="map/" method="get">
+    <label for="find">Were you there? Find your statue.</label>
+    <div>
+      <input id="find" name="find" type="search" placeholder="Minecraft username" autocomplete="off" spellcheck="false" required>
+      <button type="submit">Find</button>
+    </div>
+  </form>
+
   <div class="stats">
     <div class="stat"><b>87,615</b><span>player statues</span></div>
     <div class="stat"><b>412,885</b><span>chunks rendered</span></div>
@@ -141,6 +171,8 @@
   <h2>Walking around</h2>
   <ul>
     <li>Drag to look around, scroll or pinch to zoom.</li>
+    <li>Zoom in on a street and every statue's name appears on its stand, just like the signs in game. Get closer still to read the signs players left around their builds.</li>
+    <li>Tap the magnifying glass to search all 86,650 names, or every sign in the world.</li>
     <li>Use the menu to switch between perspective, flat and free-flight views.</li>
     <li>The world is huge. Tiles load as you move, so give it a moment on a slow connection.</li>
   </ul>
